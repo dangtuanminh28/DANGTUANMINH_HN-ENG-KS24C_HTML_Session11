@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+}
+
+/* Layout chính */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+}
+
+/* Các khối màu */
+.box {
+    background: #e74c3c;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    flex: 1;
+}
+
+/* Giao diện Desktop (≥ 1200px) */
+@media (min-width: 1200px) {
+    .box:first-of-type {
+        width: 100%;
+    }
+    .box:nth-of-type(n + 2) {
+        width: calc(33.33% - 10px);
+    }
+}
+
+/* Giao diện Tablet (768px → 1200px) */
+@media (max-width: 1200px) and (min-width: 768px) {
+    .box:first-of-type {
+        width: 100%;
+    }
+    .box:nth-of-type(2),
+    .box:nth-of-type(3),
+    .box:nth-of-type(4) {
+        width: calc(50% - 10px);
+    }
+    .box:nth-of-type(n + 5) {
+        width: 100%;
+    }
+}
+
+/* Giao diện Mobile (< 768px) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .box {
+        width: 100%;
+    }
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
