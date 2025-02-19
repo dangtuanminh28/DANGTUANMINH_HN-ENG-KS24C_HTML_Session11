@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+header {
+    background-color: red;
+    text-align: center;
+    padding: 30px 0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+aside:nth-of-type(1) {
+    background-color: green;
+    border-radius: 10px;
+    padding: 30px 0;
+}
+
+aside:nth-of-type(2) {
+    background-color: pink;
+    border-radius: 10px;
+}
+
+main {
+    background-color: yellow;
+    padding: 30px 0;
+    height: 400px;
+}
+
+section {
+    display: flex;
+    gap: 20px;
+}
+
+footer {
+    background-color: blue;
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width:1024px) {
+    section {
+        flex: clom;
+    }
+}
